@@ -67,35 +67,34 @@ document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNum
 /* BUILT-IN METHODS */
 
 // Step 1: Declare and instantiate a variable of type Date to hold the current date
-const today = new Date();
+let today = new Date();
 // Step 2: Declare a variable to hold the current year
-const currentyear = new Date(year);
+let currentYear = today.getFullYear();
 // Step 3: Using the variable declared in Step 1, call the built-in getFullYear() method/function and assign it to the variable declared in Step 2
-let date = today.getFullYear(currentyear);
+
 // Step 4: Assign the current year variable to an HTML form element with an ID of year
-document.querySelector('#year')
+document.querySelector('#year').innerHTML = currentYear;
 
 /* ARRAY METHODS */
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
-document.querySelector('#array') = numbers
+document.querySelector('#array').innerHTML = numbers;
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
-document.querySelector('#odds') = numbers.filter((n) => n % 2 == 1)
+document.querySelector('#odds').innerHTML = numbers.filter((n) => n % 2 == 1);
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
-document.querySelector('#evens') = numbers.filter((n) => n % 2 == 0)
+document.querySelector('#evens').innerHTML = numbers.filter((n) => n % 2 == 0);
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
-document.querySelector('#sumOfArray').innerHTML = numbers.reduce(sumofArray);
-function sumofArray(total, num) {
+document.querySelector('#sumOfArray').innerHTML = numbers.reduce(sumOfArray);
+function sumOfArray(total, num) {
     return total + num;
 }
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
-document.querySelector('#multiplied') = numbers.map(multiplied)
+document.querySelector('#multiplied').innerHTML = numbers.map(multiplied)
 function multiplied(num) {
     return num * 2;
 }
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
-document.querySelector('#sumOfMultiplied') = numbers.reduce.map(sumofmultiplied)
+document.querySelector('#sumOfMultiplied').innerHTML = numbers.map(number => number *2).reduce((x, y) => x +y);
 
-//stuck on Step 7, also make sure array method steps 1-7 work
