@@ -15,7 +15,7 @@
 // Step 6: Add another property named placesLived with a value of an empty array
 let profile = {
     name: 'Nathan Murri',
-    photo: 'placeholder.png',
+    photo: 'profilePic.png',
     favoriteFoods: ['Curry, Steak'],
     hobbies: ['Ark', 'Anime', 'League'],
     placesLived: []
@@ -37,6 +37,11 @@ profile.placesLived = [
 /* OUTPUT */
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
+
+// Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
+
+// Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
+
 const fullName = document.querySelector('#name');
 const photo = document.querySelector('#photo');
 const favoriteFoodsList = document.querySelector('#favorite-foods');
@@ -45,9 +50,8 @@ const table = document.querySelector('#table');
 
 fullName.textContent = profile.name;
 photo.setAttribute('src', `../images/${profile.photo}`)
-// Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
+fullName.setAttribute('alt', `../images/${profile.photo}`)
 
-// Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
 
