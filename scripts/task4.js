@@ -13,18 +13,38 @@
 // Step 5: Add another property named hobbies with a value of an array of your hobbies as strings
 
 // Step 6: Add another property named placesLived with a value of an empty array
-
+let profile = {
+    name: 'Nathan Murri',
+    photo: 'placeholder.png',
+    favoriteFoods: ['Curry, Steak'],
+    hobbies: ['Ark', 'Anime', 'League'],
+    placesLived: []
+};
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
 
 // Step 8: For each property, add appropriate values as strings
 
 // Step 9: Add additional objects with the same properties for each place you've lived
 
+profile.placesLived = [
+    {
+        place: 'Saint Anthony, Idaho',
+        length: 20,
+    }
+];
+
 
 /* OUTPUT */
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
+const fullName = document.querySelector('#name');
+const photo = document.querySelector('#photo');
+const favoriteFoodsList = document.querySelector('#favorite-foods');
+const hobbiesList = document.querySelector('#hobbies');
+const table = document.querySelector('#table');
 
+fullName.textContent = profile.name;
+photo.setAttribute('src', `../images/${profile.photo}`)
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
