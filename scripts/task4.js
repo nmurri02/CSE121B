@@ -54,15 +54,33 @@ fullName.setAttribute('alt', `../images/${profile.photo}`)
 
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
-
+let favoriteFood1 = document.createElement('li');
+favoriteFood1.innerHTML = "Curry";
+let favoriteFood2 = document.createElement('li');
+favoriteFood2.innerHTML = "Steak";
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
-
+document.querySelector('#favorite-foods').appendChild(favoriteFood1);
+document.querySelector('#favorite-foods').appendChild(favoriteFood2);
 // Step 6: Repeat Step 4 for each hobby in the hobbies property
-
+let hobby1 = document.createElement('li');
+hobby1.innerHTML = "Ark";
+let hobby2 = document.createElement('li');
+hobby2.innerHTML = "Anime";
+let hobby3 = document.createElement('li');
+hobby3.innerHTML = "League";
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
-
+document.querySelector('#hobbies').appendChild(hobby1);
+document.querySelector('#hobbies').appendChild(hobby2);
+document.querySelector('#hobbies').appendChild(hobby3);
 // Step 8: For each object in the <em>placesLived</em> property:
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
+let placesLived = document.createElement('dt');
+placesLived.innerHTML = "Saint Anthony, Idaho";
+let placesLivedLength = document.createElement('dd');
+placesLivedLength.innerHTML = "20 years";
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+document.querySelector('#places-lived').appendChild(placesLived);
+document.querySelector('#places-lived').appendChild(placesLivedLength);
+
