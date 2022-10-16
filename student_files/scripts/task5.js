@@ -53,9 +53,9 @@ function outputTempleList(temples) {
         h4.innerHTML = temple.location;
         secondh4.innerHTML = temple.dedicated;
 
-        article.appendChild = h3;
-        article.appendChild = h4;
-        article.appendChild = secondh4;
+        article.appendChild(h3);
+        article.appendChild(h4);
+        article.appendChild(secondh4);
 
         main.appendChild(article);
     })
