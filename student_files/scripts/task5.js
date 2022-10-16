@@ -25,7 +25,7 @@ if (1 <= dayOfWeek < 6) {
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
-let newMessage = null;
+let newMessage = today;
 
 switch (today.getDay()) {
     case 0:
