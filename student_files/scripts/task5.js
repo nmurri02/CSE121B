@@ -80,12 +80,12 @@ function outputTempleList(temples) {
         let h3 = document.createElement('h3');
         let h4 = document.createElement('h4');
         let secondh4 = document.createElement('h4');
-        let image = document.createElement('img');
+        let image = document.createElement('IMG');
 
         h3.innerHTML = temple.templeName;
         h4.innerHTML = temple.location;
         secondh4.innerHTML = temple.dedicated;
-        image.innerHTMl = temple.imageURL;
+        image.innerHTML = temple.imageURL;
 
         article.appendChild(h3);
         article.appendChild(h4);
