@@ -25,15 +25,39 @@ if (1 <= dayOfWeek < 6) {
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
+let newMessage = null;
 
+switch (new Date().getDay()) {
+    case 0:
+        dayOfWeek = "Sunday";
+        break;
+    case 1:
+        dayOfWeek = "Monday";
+        break;
+    case 2:
+        dayOfWeek = "Tuesday";
+        break;
+    case 3:
+        dayOfWeek = "Wednesday";
+        break;
+    case 4:
+        dayOfWeek = "Thursday";
+        break;
+    case 5:
+        dayOfWeek = "Friday";
+        break;
+    case 6:
+        dayOfWeek = "Saturday";
+        break;
+}
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
 
 /* OUTPUT */
 
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
-
+document.querySelector('#message1').innerHTML = message
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
-
+document.querySelector('#message2').innerHTML = newMessage
 /* FETCH */
 
 const main = document.querySelector('main');
@@ -77,6 +101,14 @@ function outputTempleList(temples) {
 function reset() {
     console.log('reset the stuffs');
 }
+
+function sortBy() {
+    reset();
+    temples.sort(function(a, b){return a-b});
+    outputTempleList();
+}
+
+document.querySelector('#sortBy').addEventListener('click', sortBy);
 // Step 1: Declare a global empty array variable to store a list of temples
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
