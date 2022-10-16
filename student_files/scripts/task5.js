@@ -27,6 +27,43 @@ let dayOfWeek = today.getDay();
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
 
 /* FETCH */
+
+const main = document.querySelector('main');
+const baseURL = 'https://byui.cse.github.io/cse121b-course/week05/temples.json';
+getTemles(baseURL);
+
+async function getTemples(url) {
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        outputTempleList(data);
+    }
+}
+
+
+function outputTempleList(temples) {
+    reset();
+    temples.forEach(temple => {
+        let article = document.createElement('article');
+        let h3 = document.createElement('h3');
+        let h4 = document.createElement('h4');
+        let secondh4 = document.createElement('h4');
+
+        h3.innerHTML = temple.templeName;
+        h4.innerHTML = temple.location;
+        secondh4.innerHTML = temple.dedicated;
+
+        article.appendChild = h3;
+        article.appendChild = h4;
+        article.appendChild = secondh4;
+
+        main.appendChild(article);
+    })
+}
+
+function reset() {
+    console.log('reset the stuffs');
+}
 // Step 1: Declare a global empty array variable to store a list of temples
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
