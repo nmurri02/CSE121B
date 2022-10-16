@@ -61,7 +61,7 @@ document.querySelector('#message2').innerHTML = newMessage
 /* FETCH */
 
 const main = document.querySelector('main');
-const baseURL = 'https://byui.cse.github.io/cse121b-course/week05/temples.json';
+const baseURL = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
 getTemles(baseURL);
 
 async function getTemples(url) {
