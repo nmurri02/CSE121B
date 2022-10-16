@@ -3,9 +3,9 @@
 /* IF/ELSE IF */
 
 // Step 1: Declare and initialize a new variable to hold the current date
-
+let today = new Date();
 // Step 2: Declare another variable to hold the day of the week
-
+let dayOfWeek = today.getDay();
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
 
 // Step 4: Declare a variable to hold a message that will be displayed
