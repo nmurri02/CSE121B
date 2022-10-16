@@ -25,29 +25,29 @@ if (1 <= dayOfWeek < 6) {
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
-let newMessage = today;
+let newMessage = null;
 
 switch (today.getDay()) {
     case 0:
-        dayOfWeek = "Sunday";
+        newMessage = "Sunday";
         break;
     case 1:
-        dayOfWeek = "Monday";
+        newMessage = "Monday";
         break;
     case 2:
-        dayOfWeek = "Tuesday";
+        newMessage = "Tuesday";
         break;
     case 3:
-        dayOfWeek = "Wednesday";
+        newMessage = "Wednesday";
         break;
     case 4:
-        dayOfWeek = "Thursday";
+        newMessage = "Thursday";
         break;
     case 5:
-        dayOfWeek = "Friday";
+        newMessage = "Friday";
         break;
     case 6:
-        dayOfWeek = "Saturday";
+        newMessage = "Saturday";
         break;
 }
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
