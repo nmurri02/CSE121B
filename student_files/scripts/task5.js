@@ -9,10 +9,18 @@ let dayOfWeek = today.getDay();
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
 
 // Step 4: Declare a variable to hold a message that will be displayed
-
+let message = null;
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
 
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
+
+
+
+if (1 <= dayOfWeek < 6) {
+    message = 'Hang in there!';
+}   else {
+    message = 'Woohoo! It is the weekend!';
+}
 
 /* SWITCH, CASE, BREAK */
 
@@ -48,18 +56,23 @@ function outputTempleList(temples) {
         let h3 = document.createElement('h3');
         let h4 = document.createElement('h4');
         let secondh4 = document.createElement('h4');
+        let image = document.createElement('img');
 
         h3.innerHTML = temple.templeName;
         h4.innerHTML = temple.location;
         secondh4.innerHTML = temple.dedicated;
+        image.innerHTMl = temple.imageURL;
 
         article.appendChild(h3);
         article.appendChild(h4);
         article.appendChild(secondh4);
+        article.appendChild(image);
 
         main.appendChild(article);
     })
 }
+
+
 
 function reset() {
     console.log('reset the stuffs');
