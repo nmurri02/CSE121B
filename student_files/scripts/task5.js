@@ -27,7 +27,7 @@ if (1 <= dayOfWeek < 6) {
 // Step 1: Declare a new variable to hold another message
 let newMessage = null;
 
-switch (new Date().getDay()) {
+switch (today.getDay()) {
     case 0:
         dayOfWeek = "Sunday";
         break;
