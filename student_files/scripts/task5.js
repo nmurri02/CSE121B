@@ -16,7 +16,7 @@ let message = null;
 
 
 
-if (1 <= dayOfWeek < 6) {
+if (dayOfWeek > 0, dayOfWeek < 6) {
     message = 'Hang in there!';
 }   else {
     message = 'Woohoo! It is the weekend!';
