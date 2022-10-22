@@ -34,10 +34,10 @@ async function fetchSumByName(name,abc){
     //turn the name into link format
     while(name.includes(" ")){
         let space = name.indexOf(" ");
-        name = name.subString(0,space) + sp +name.subString(space+1);
+        name = name.substring(0,space) + sp +name.substring(space+1);
     }
     //request the riot api
-    const link = 'https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}?${riotKey}'
+    const link = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${name}?${riotKey}`
     const response = await fetch(link);
     //turn the value returned to json
     let data = await response.json();
