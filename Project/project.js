@@ -6,7 +6,7 @@ getMatchList(fetchSumByName('FriedRiceBoy965' , 'accountID'));
 
 async function getMatchList(accID, champID, queue, timeEnd, timeBegin, indexEnd, indexBegin) {
     //building link
-    let link = 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/' + awat accId +'?';
+    let link = 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/' + await accID +'?';
     if(champID != null)
         link+= 'champion-'+champID+'&';
     if(queue != null)
