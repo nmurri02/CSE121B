@@ -1,4 +1,4 @@
-const riotKey = 'RGAPI-1cee9e01-b9d0-4b1b-81b2-f2b0a8f10d49';
+const riotKey = 'RGAPI-acc04271-b854-4301-ad91-566520239598';
 const sp = '%20';
 const fetch = require("node-fetch");
 
@@ -6,7 +6,7 @@ getMatchList(fetchSumByName('FriedRiceBoy965' , 'accountID'));
 
 async function getMatchList(accID, champID, queue, timeEnd, timeBegin, indexEnd, indexBegin) {
     //building link
-    let link = 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/' + await accID +'?';
+    let link = 'https://americas.api.riotgames.com/lol/match/v5/matchlists/by-account/' + await accID +'?';
     if(champID != null)
         link+= 'champion-'+champID+'&';
     if(queue != null)
